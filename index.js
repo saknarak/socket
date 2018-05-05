@@ -10,6 +10,8 @@ let acl = {
   users: [],
 }
 
+loadAcl()
+
 const reservedTopics = ['connect', 'connection', 'disconnect', 'publish', 'subscribe', 'unsubscribe']
 
 io.on('connection', socket => {
