@@ -17,7 +17,7 @@ io.on('connection', socket => {
   
   socket.on('signin', auth => {
     if (!acl.users.some(u => u.user === auth.user && u.pass === auth.pass)) {
-      return console.log('INVALID USER/PASS')
+      return console.log('INVALID USER/PASS', auth)
     }
     socket.user = auth.user
   })
